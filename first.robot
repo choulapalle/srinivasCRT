@@ -1,6 +1,6 @@
 *** Settings ***
 Library                QWeb
-Suite Setup            OpenBrowser                 about:blank    edge
+Suite Setup            OpenBrowser                 about:blank       chrome
 
 
 *** Variables ***
@@ -8,7 +8,7 @@ ${BANK_URL}            https://parabank.parasoft.com/parabank/index.htm
 
 
 *** Test Cases ***
-Login to Application
+Login To Application
     [Documentation]    this is Login test case for parabank
     [Tags]             smoke
     GoTo               ${BANK_URL}
@@ -22,11 +22,9 @@ Login to Application
     TypeText           Zip Code                    75189
     TypeText           Phone #                     1234567890
     TypeText           SSN                         123-223-333
-    TypeText           Username                    Copadouser1  anchor=SSN
+    TypeText           Username                    Copadouser1       anchor=SSN
     TypeText           Password                    Copadouser223
     TypeText           Confirm                     Copadouser223
-    ClickText          REGISTER                    anchor=Confirm
-
-
+    ClickText          REGISTER                    
 
 
