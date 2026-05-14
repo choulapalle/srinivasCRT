@@ -1,17 +1,31 @@
 *** Settings ***
-Library                     QWeb
-Suite Setup                 OpenBrowser     about:blank    chrome
+Library                QWeb
+Suite Setup            OpenBrowser                 about:blank    chrome
 
 
 *** Variables ***
-${BANK_URL}   https://parabank.parasoft.com/parabank/index.htm
+${BANK_URL}            https://parabank.parasoft.com/parabank/index.htm
 
 
 *** Test Cases ***
 Login to Application
-    [Documentation]         this is Login test case for parabank
-    [Tags]                  smoke
-    GoTo                    ${BANK_URL}
+    [Documentation]    this is Login test case for parabank
+    [Tags]             smoke
+    GoTo               ${BANK_URL}
+    ClickText          Register
+    VerifyText         Signing up is easy!
+    TypeText           First Name                  Copado
+    TypeText           Last Name                   Copado1
+    TypeText           Address                     12345
+    TypeText           City                        dallas
+    TypeText           State                       Texas
+    TypeText           Zip Code                    75189
+    TypeText           Phone #                     1234567890
+    TypeText           SSN                         123-223-333
+    TypeText           Username                    Copadouser1  anchor=SSN
+    TypeText           Password                    Copadouser2
+    TypeText           Confirm                     Copadouser2
+    ClickText          REGISTER                    anchor=Confirm
 
 
 
