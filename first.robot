@@ -1,6 +1,6 @@
 *** Settings ***
 Library                QWeb
-Suite Setup            OpenBrowser                 about:blank    chrome
+Suite Setup            OpenBrowser                 about:blank    edge
 
 
 *** Variables ***
@@ -23,8 +23,8 @@ Login to Application
     TypeText           Phone #                     1234567890
     TypeText           SSN                         123-223-333
     TypeText           Username                    Copadouser1  anchor=SSN
-    TypeText           Password                    Copadouser2
-    TypeText           Confirm                     Copadouser2
+    TypeText           Password                    Copadouser223
+    TypeText           Confirm                     Copadouser223
     ClickText          REGISTER                    anchor=Confirm
 
 
