@@ -23,7 +23,7 @@ Login To Application
     TypeText           Phone #                     1234567890
     TypeText           SSN                         123-223-3335
     TypeText           Username                    Copadouser        anchor=SSN
-    TypeText          password                     Copadouser        anchor=2
+    TypeText           password                    Copadouser        anchor=Confirm
     TypeText           Confirm                     Copadouser
     ClickText          REGISTER                    anchor=Confirm
 
