@@ -21,10 +21,12 @@ Login To Application
     TypeText           State                       Texas
     TypeText           Zip Code                    75189
     TypeText           Phone #                     1234567890
-    TypeText           SSN                         123-223-333
-    TypeText           Username                    Copadouser1       anchor=SSN
-    TypeText           Password                    Copadouser223
-    TypeText           Confirm                     Copadouser223
-    ClickText          REGISTER                    
+    TypeText           SSN                         123-223-3335
+    TypeText           Username                    Copadouser        anchor=SSN
+    TypeText          password                     Copadouser        anchor=2
+    TypeText           Confirm                     Copadouser
+    ClickText          REGISTER                    anchor=Confirm
+
+
 
 
